@@ -183,6 +183,7 @@
 }
 
 @font-face {
+  font-display: swap;
   font-family: "Viaoda Libre";
   font-style: normal;
   font-weight: 400;
@@ -192,11 +193,13 @@
 }
 
 @font-face {
+  font-display: swap;
   font-family: "Nanum Myeongjo";
   font-style: normal;
   font-weight: 400;
   src: local(""),
-    url("../public/fonts/nanum-myeongjo-v20-latin-regular.woff2") format("woff2"),
+    url("../public/fonts/nanum-myeongjo-v20-latin-regular.woff2")
+      format("woff2"),
     url("../public/fonts/nanum-myeongjo-v20-latin-regular.woff") format("woff");
 }
 
@@ -252,7 +255,7 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  transition: all 2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  transition: all 1s ease-out;
 }
 
 main {
@@ -278,9 +281,7 @@ a {
   color: inherit;
   text-decoration: none;
   background-color: transparent;
-  outline-offset: 4px;
   border-bottom: 2px solid transparent;
-  transition: all 0.25s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
 
 a:focus {
@@ -294,11 +295,30 @@ img {
   object-fit: cover;
   object-position: center;
   border-style: none;
-  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 ul {
   list-style: none;
+}
+
+button {
+  vertical-align: middle;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  -webkit-appearance: button;
+  color: inherit;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  outline: transparent solid 4px;
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:focus {
+  outline: var(--color-aquamarine-3) solid 4px;
 }
 
 .align-self-center {
@@ -317,8 +337,16 @@ ul {
   aspect-ratio: 9/16;
 }
 
+.bb-2 {
+  border-bottom: 2px solid var(--color-teal-6);
+}
+
 .bg-teal-6 {
   background-color: var(--color-teal-6);
+}
+
+.capitalize {
+  text-transform: capitalize;
 }
 
 .gap-6 {
@@ -329,20 +357,20 @@ ul {
   display: grid;
 }
 
-.grid-1 {
+.grid-col-1 {
   grid-template-columns: minmax(0, 1fr);
 }
 
-.grid-2 {
+.grid-col-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-.hover-scale:hover {
-  transform: scale(1.1);
+.grid-row-3 {
+  grid-template-rows: auto 1fr auto;
 }
 
-.hover-link:hover {
-  border-bottom: 2px solid var(--color-teal-6);
+.hidden {
+  display: none;
 }
 
 .m-6 {
@@ -351,6 +379,14 @@ ul {
 
 .max-w-50 {
   max-width: 50%;
+}
+
+.mb-6 {
+  margin-bottom: 6vw;
+}
+
+.min-h-screen {
+  min-height: 100vh;
 }
 
 .mt-6 {
@@ -414,10 +450,6 @@ ul {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  body,
-  img {
-    transition: none;
-  }
 }
 
 /* 640px */
@@ -426,12 +458,17 @@ ul {
     line-height: 1.7;
   }
 
+  .sm-aspect-21-9 {
+    aspect-ratio: 21/9;
+  }
+
   .sm-gap-2 {
     gap: 2vw;
   }
 
-  .sm-aspect-21-9 {
-    aspect-ratio: 21/9;
+  .sm-my-2 {
+    margin-top: 2vw;
+    margin-bottom: 2vw;
   }
 }
 
@@ -450,8 +487,32 @@ ul {
     line-height: 1.8;
   }
 
-  .md-grid-4 {
+  .md-bb-0 {
+    border-bottom: none;
+  }
+
+  .md-grid {
+    display: grid;
+  }
+
+  .md-grid-col-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .md-grid-col-4-auto {
+    grid-template-columns: repeat(4, minmax(0, auto));
+  }
+
+  .md-hidden {
+    display: none;
+  }
+
+  .md-hover-bb:hover {
+    border-bottom: 2px solid var(--color-teal-6);
+  }
+
+  .md-justify {
+    justify-content: end;
   }
 
   .md-max-w-50 {
@@ -511,6 +572,14 @@ ul {
     gap: 38px;
   }
 
+  .m-6 {
+    margin: 115px;
+  }
+
+  .mb-6 {
+    margin-bottom: 115px;
+  }
+
   .mt-6 {
     margin-top: 115px;
   }
@@ -518,6 +587,11 @@ ul {
   .mx-6 {
     margin-right: 115px;
     margin-left: 115px;
+  }
+
+  .sm-my-2 {
+    margin-top: 38px;
+    margin-bottom: 38px;
   }
 
   .p-6 {

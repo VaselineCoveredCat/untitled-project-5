@@ -1,54 +1,47 @@
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
-import Footer from "../components/Footer";
+import { createClient } from "@supabase/supabase-js";
 
-export default function Home() {
+export async function getStaticProps() {
+  const supabase = createClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL,
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
+  );
+
+  let database = await supabase
+    .from("dress")
+    .select("*")
+    .order("id", { ascending: true })
+    .limit(4);
+
+  return { props: { datas: database.data } };
+}
+
+export default function Home(props) {
   return (
     <React.Fragment>
       <Head>
         <title>Untitled Project 5</title>
       </Head>
 
-      <main className="gap-6 grid grid-1">
-        <div className="grid grid-1">
+      <main className="gap-6 grid grid-col-1">
+        <header className="grid grid-col-1">
           <picture className="area-1-1">
             <source
-              media="(min-resolution: 144dpi) and (min-width: 1920px), (-webkit-min-device-pixel-ratio: 1.5) and (min-width: 1920px)"
-              srcSet="https://images.pexels.com/photos/413885/pexels-photo-413885.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=1920"
+              srcSet="/images/pexels-pixabay-413885.avif"
+              type="image/avif"
             />
             <source
-              media="(min-resolution: 144dpi) and (min-width: 1280px), (-webkit-min-device-pixel-ratio: 1.5) and (min-width: 1280px)"
-              srcSet="https://images.pexels.com/photos/413885/pexels-photo-413885.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=1280"
+              srcSet="/images/pexels-pixabay-413885.webp"
+              type="image/webp"
             />
-            <source
-              media="(min-resolution: 144dpi) and (min-width: 640px), (-webkit-min-device-pixel-ratio: 1.5) and (min-width: 640px)"
-              srcSet="https://images.pexels.com/photos/413885/pexels-photo-413885.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=640"
-            />
-            <source
-              media="(min-resolution: 144dpi), (-webkit-min-device-pixel-ratio: 1.5)"
-              srcSet="https://images.pexels.com/photos/413885/pexels-photo-413885.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=300"
-            />
-
-            <source
-              media="(min-width: 1920px)"
-              srcSet="https://images.pexels.com/photos/413885/pexels-photo-413885.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=1920"
-            />
-            <source
-              media="(min-width: 1280px)"
-              srcSet="https://images.pexels.com/photos/413885/pexels-photo-413885.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=1280"
-            />
-            <source
-              media="(min-width: 640px)"
-              srcSet="https://images.pexels.com/photos/413885/pexels-photo-413885.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=640"
-            />
-
             <img
               alt=""
               aria-hidden="true"
               className="aspect-1-1 sm-aspect-21-9 lg-aspect-16-9"
               encoding="async"
-              src="https://images.pexels.com/photos/413885/pexels-photo-413885.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=300"
+              src="/images/pexels-pixabay-413885.jpg"
             />
           </picture>
 
@@ -56,7 +49,7 @@ export default function Home() {
             <h1 className="max-w-50">Grand Sale</h1>
 
             <a
-              className="hover-link"
+              className="md-hover-bb"
               href="https://www.youtube.com/watch?v=CPrf_8jiTKw"
               rel="noopener noreferrer"
               target="_blank"
@@ -64,7 +57,7 @@ export default function Home() {
               Watch trailer
             </a>
           </div>
-        </div>
+        </header>
 
         <div className="mx-6">
           <p className="md-max-w-50 md-ml-auto text-h5 text-center md-text-right">
@@ -78,117 +71,57 @@ export default function Home() {
             <h2>Dress Collections</h2>
           </div>
 
-          <ul className="gap-6 sm-gap-2 grid grid-2 md-grid-4 mt-6">
-            <li>
-              <Link href="/">
-                <a className="overflow-hidden text-ellipsis w-100 whitespace-nowrap">
-                  <div className="overflow-hidden">
-                    <picture>
-                      <source
-                        media="(min-resolution: 144dpi), (-webkit-min-device-pixel-ratio: 1.5)"
-                        srcSet="/Floral Pleated Midi Dress 577778.png"
-                      />
-                      <img
-                        alt=""
-                        aria-hidden="true"
-                        className="aspect-9-16 hover-scale"
-                        encoding="async"
-                        src="/Floral Pleated Midi Dress 577778.png"
-                      />
-                    </picture>
-                  </div>
-                  Floral Pleated Midi Dress
-                  <br />
-                  <span className="sr-only">Price</span><b>Rp 577.778</b>
-                </a>
-              </Link>
-            </li>
+          {props.datas ? (
+            <React.Fragment>
+              <ul className="gap-6 sm-gap-2 grid grid-col-2 md-grid-col-4 mt-6">
+                {props.datas.map((data) => {
+                  return (
+                    <li key={data.id}>
+                      <Link href="/">
+                        <a className="overflow-hidden text-ellipsis w-100 whitespace-nowrap">
+                          <div className="overflow-hidden">
+                            <picture>
+                              <source
+                                srcSet={`/images/${data.name}.avif`}
+                                type="image/avif"
+                              />
+                              <source
+                                srcSet={`/images/${data.name}.webp`}
+                                type="image/webp"
+                              />
+                              <img
+                                alt=""
+                                aria-hidden="true"
+                                className="aspect-9-16"
+                                encoding="async"
+                                src={`/images/${data.name}.png`}
+                              />
+                            </picture>
+                          </div>
+                          <span className="capitalize">
+                            {data.name.replaceAll("-", " ")}
+                          </span>
+                          <br />
+                          <span className="sr-only">Price</span>
+                          <b>Rp {data.price}</b>
+                        </a>
+                      </Link>
+                    </li>
+                  );
+                })}
+              </ul>
 
-            <li>
-              <Link href="/">
-                <a className="overflow-hidden text-ellipsis w-100 whitespace-nowrap">
-                  <div className="overflow-hidden">
-                    <picture>
-                      <source
-                        media="(min-resolution: 144dpi), (-webkit-min-device-pixel-ratio: 1.5)"
-                        srcSet="/Floral Print Open Back Pleated Midi Dress 577778.png"
-                      />
-                      <img
-                        alt=""
-                        aria-hidden="true"
-                        className="aspect-9-16 hover-scale"
-                        encoding="async"
-                        src="/Floral Print Open Back Pleated Midi Dress 577778.png"
-                      />
-                    </picture>
-                  </div>
-                  Floral Print Open Back Pleated Midi Dress
-                  <br />
-                  <span className="sr-only">Price</span><b>Rp 577.778</b>
-                </a>
-              </Link>
-            </li>
-
-            <li>
-              <Link href="/">
-                <a className="overflow-hidden text-ellipsis w-100 whitespace-nowrap">
-                  <div className="overflow-hidden">
-                    <picture>
-                      <source
-                        media="(min-resolution: 144dpi), (-webkit-min-device-pixel-ratio: 1.5)"
-                        srcSet="/Porcelain Print Long Sleeve Pleated Midi Dress 577778.png"
-                      />
-                      <img
-                        alt=""
-                        aria-hidden="true"
-                        className="aspect-9-16 hover-scale"
-                        encoding="async"
-                        src="/Porcelain Print Long Sleeve Pleated Midi Dress 577778.png"
-                      />
-                    </picture>
-                  </div>
-                  Porcelain Print Long Sleeve Pleated Midi Dress
-                  <br />
-                  <span className="sr-only">Price</span><b>Rp 577.778</b>
-                </a>
-              </Link>
-            </li>
-
-            <li>
-              <Link href="/">
-                <a className="overflow-hidden text-ellipsis w-100 whitespace-nowrap">
-                  <div className="overflow-hidden">
-                    <picture>
-                      <source
-                        media="(min-resolution: 144dpi), (-webkit-min-device-pixel-ratio: 1.5)"
-                        srcSet="/Satin Pleated Midi Dress 486550.png"
-                      />
-                      <img
-                        alt=""
-                        aria-hidden="true"
-                        className="aspect-9-16 hover-scale"
-                        encoding="async"
-                        src="/Satin Pleated Midi Dress 486550.png"
-                      />
-                    </picture>
-                  </div>
-                  Satin Pleated Midi Dress
-                  <br />
-                  <span className="sr-only">Price</span><b>Rp 486.550</b>
-                </a>
-              </Link>
-            </li>
-          </ul>
-
-          <div className="mt-6 text-center text-upper">
-            <Link href="/">
-              <a className="hover-link">See All Collections</a>
-            </Link>
-          </div>
+              <div className="mt-6 text-center text-upper">
+                <Link href="/collections">
+                  <a className="md-hover-bb">See All Collections</a>
+                </Link>
+              </div>
+            </React.Fragment>
+          ) : (
+            <p className="text-center">Error occured</p>
+          )}
         </article>
       </main>
-
-      <Footer />
     </React.Fragment>
   );
 }
