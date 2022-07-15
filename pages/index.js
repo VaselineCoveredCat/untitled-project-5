@@ -9,13 +9,13 @@ export async function getStaticProps() {
     process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
   );
 
-  let database = await supabase
+  let res = await supabase
     .from("dress")
     .select("*")
     .order("id", { ascending: true })
     .limit(4);
 
-  return { props: { datas: database.data } };
+  return { props: { items: res.data } };
 }
 
 export default function Home(props) {
@@ -71,22 +71,22 @@ export default function Home(props) {
             <h2>Dress Collections</h2>
           </div>
 
-          {props.datas ? (
+          {props.items ? (
             <React.Fragment>
               <ul className="gap-6 sm-gap-2 grid grid-col-2 md-grid-col-4 mt-6">
-                {props.datas.map((data) => {
+                {props.items.map((item) => {
                   return (
-                    <li key={data.id}>
+                    <li key={item.id}>
                       <Link href="/">
                         <a className="overflow-hidden text-ellipsis w-100 whitespace-nowrap">
                           <div className="overflow-hidden">
                             <picture>
                               <source
-                                srcSet={`/images/${data.name}.avif`}
+                                srcSet={`/images/${item.name}.avif`}
                                 type="image/avif"
                               />
                               <source
-                                srcSet={`/images/${data.name}.webp`}
+                                srcSet={`/images/${item.name}.webp`}
                                 type="image/webp"
                               />
                               <img
@@ -94,16 +94,16 @@ export default function Home(props) {
                                 aria-hidden="true"
                                 className="aspect-9-16"
                                 encoding="async"
-                                src={`/images/${data.name}.png`}
+                                src={`/images/${item.name}.jpg`}
                               />
                             </picture>
                           </div>
                           <span className="capitalize">
-                            {data.name.replaceAll("-", " ")}
+                            {item.name.replaceAll("-", " ")}
                           </span>
                           <br />
                           <span className="sr-only">Price</span>
-                          <b>Rp {data.price}</b>
+                          <b>Rp {item.price}</b>
                         </a>
                       </Link>
                     </li>
