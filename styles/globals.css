@@ -170,30 +170,29 @@
 
 @font-face {
   font-family: "Viaoda Libre-fallback";
+  src: local("Arial");
   size-adjust: 86.69%;
   ascent-override: 147%;
-  src: local("Arial");
 }
 
 @font-face {
   font-family: "Nanum Myeongjo-fallback";
+  src: local("Times New Roman");
   size-adjust: 108.75%;
   ascent-override: 80%;
-  src: local("Times New Roman");
 }
 
 @font-face {
-  font-display: swap;
   font-family: "Viaoda Libre";
   font-style: normal;
   font-weight: 400;
   src: local(""),
     url("../public/fonts/viaoda-libre-v15-latin-regular.woff2") format("woff2"),
     url("../public/fonts/viaoda-libre-v15-latin-regular.woff") format("woff");
+  font-display: swap;
 }
 
 @font-face {
-  font-display: swap;
   font-family: "Nanum Myeongjo";
   font-style: normal;
   font-weight: 400;
@@ -201,6 +200,7 @@
     url("../public/fonts/nanum-myeongjo-v20-latin-regular.woff2")
       format("woff2"),
     url("../public/fonts/nanum-myeongjo-v20-latin-regular.woff") format("woff");
+  font-display: swap;
 }
 
 html {
@@ -302,18 +302,18 @@ ul {
 }
 
 button {
-  vertical-align: middle;
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
-  -webkit-appearance: button;
   color: inherit;
   text-align: center;
   text-decoration: none;
+  vertical-align: middle;
   cursor: pointer;
   background-color: transparent;
   border: none;
   outline: transparent solid 4px;
+  -webkit-appearance: button;
   -webkit-tap-highlight-color: transparent;
 }
 
