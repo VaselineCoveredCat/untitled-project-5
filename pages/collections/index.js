@@ -12,8 +12,8 @@ export async function getStaticProps() {
   let res = await supabase
     .from("dress")
     .select("*")
-    .order("id", { ascending: true })
-    .limit(40);
+    .order("name", { ascending: true })
+    .limit(20);
 
   return { props: { items: res.data } };
 }
