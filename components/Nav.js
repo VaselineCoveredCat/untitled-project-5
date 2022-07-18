@@ -8,10 +8,13 @@ export default function Nav() {
     <header>
       <nav className="m-6 sm-my-2">
         <button
+          aria-controls="menu"
+          aria-expanded={isOpen}
+          aria-haspopup="true"
           className={`${isOpen ? "mb-6" : ""} md-hidden`}
           onClick={() => setIsOpen(!isOpen)}
         >
-          <span className="sr-only">Menu</span>
+          <span className="sr-only">{isOpen ? "Close Menu" : "Open Menu"}</span>
           <img alt="" aria-hidden="true" src="/menu.svg" />
         </button>
 
@@ -19,6 +22,7 @@ export default function Nav() {
           className={`gap-6 grid md-grid grid-col-1 md-grid-col-4-auto ${
             isOpen ? "" : "hidden"
           } md-justify`}
+          id="menu"
         >
           <li className="bb-2 md-bb-0">
             <Link href="/">
