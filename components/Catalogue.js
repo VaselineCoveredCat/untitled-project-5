@@ -6,16 +6,16 @@ export default function Catalogue(props) {
       {props.items.map((item) => {
         return (
           <li key={item.id}>
-            <Link href="/">
+            <Link href={`/collections/${item.slug}`}>
               <a className="overflow-hidden text-ellipsis w-100 whitespace-nowrap">
                 <div className="overflow-hidden">
                   <picture>
                     <source
-                      srcSet={`/images/${item.name}.avif`}
+                      srcSet={`/images/${item.slug}.avif`}
                       type="image/avif"
                     />
                     <source
-                      srcSet={`/images/${item.name}.webp`}
+                      srcSet={`/images/${item.slug}.webp`}
                       type="image/webp"
                     />
                     <img
@@ -23,13 +23,11 @@ export default function Catalogue(props) {
                       aria-hidden="true"
                       className="aspect-9-16"
                       encoding="async"
-                      src={`/images/${item.name}.jpg`}
+                      src={`/images/${item.slug}.jpg`}
                     />
                   </picture>
                 </div>
-                <span className="capitalize">
-                  {item.name.replaceAll("-", " ")}
-                </span>
+                <span>{item.name}</span>
                 <br />
                 <span className="sr-only">Price</span>
                 <b>Rp {item.price}</b>
