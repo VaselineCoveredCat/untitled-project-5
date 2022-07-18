@@ -1,0 +1,40 @@
+.header {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.header :is(picture, div) {
+  grid-area: 1/1;
+}
+
+.header img {
+  aspect-ratio: 1/1;
+}
+
+.header div {
+  align-self: center;
+  margin: 6vw;
+  text-transform: uppercase;
+}
+
+.header h1 {
+  max-width: 50%;
+}
+
+.header a:hover {
+  border-bottom: 2px solid var(--color-teal-6);
+}
+
+/* 640px */
+@media (min-width: 40em) {
+  .header img {
+    aspect-ratio: 21/9;
+  }
+}
+
+/* 1280px */
+@media (min-width: 80em) {
+  .header img {
+    aspect-ratio: 16/9;
+  }
+}
