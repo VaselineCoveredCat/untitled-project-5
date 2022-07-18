@@ -49,7 +49,7 @@ export default function Nav() {
           </li>
 
           <li className="bb-2 md-bb-0">
-            <Link href="/">
+            <Link href="/contact">
               <a className="md-hover-bb" onClick={() => setIsOpen(false)}>
                 Contact
               </a>
