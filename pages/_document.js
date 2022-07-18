@@ -1,4 +1,4 @@
-import { Head, Html, Main, NextScript } from "next/document";
+import { Html, Head, Main, NextScript } from "next/document";
 
 export default function Document() {
   return (
@@ -18,6 +18,7 @@ export default function Document() {
           rel="preload"
           type="font/woff2"
         />
+        <meta content="noindex" name="robots" />
         <meta content="Firas Hasnawan" name="author" />
         <meta
           content="Shop our variety of designs and styles to give your wardrobe fashionable flair. Free in-store shipping and returns."
