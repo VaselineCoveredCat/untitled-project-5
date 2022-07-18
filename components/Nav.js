@@ -4,16 +4,12 @@ import Link from "next/link";
 export default function Nav() {
   const [isOpen, setIsOpen] = useState(false);
 
-  function handleMenu() {
-    setIsOpen(!isOpen);
-  }
-
   return (
     <header>
       <nav className="m-6 sm-my-2">
         <button
           className={`${isOpen ? "mb-6" : ""} md-hidden`}
-          onClick={handleMenu}
+          onClick={() => setIsOpen(!isOpen)}
         >
           <span className="sr-only">Menu</span>
           <img alt="" aria-hidden="true" src="/menu.svg" />
@@ -26,7 +22,7 @@ export default function Nav() {
         >
           <li className="bb-2 md-bb-0">
             <Link href="/">
-              <a className="md-hover-bb" onClick={handleMenu}>
+              <a className="md-hover-bb" onClick={() => setIsOpen(false)}>
                 Home
               </a>
             </Link>
@@ -34,7 +30,7 @@ export default function Nav() {
 
           <li className="bb-2 md-bb-0">
             <Link href="/collections">
-              <a className="md-hover-bb" onClick={handleMenu}>
+              <a className="md-hover-bb" onClick={() => setIsOpen(false)}>
                 Collections
               </a>
             </Link>
@@ -42,7 +38,7 @@ export default function Nav() {
 
           <li className="bb-2 md-bb-0">
             <Link href="/">
-              <a className="md-hover-bb" onClick={handleMenu}>
+              <a className="md-hover-bb" onClick={() => setIsOpen(false)}>
                 About
               </a>
             </Link>
@@ -50,7 +46,7 @@ export default function Nav() {
 
           <li className="bb-2 md-bb-0">
             <Link href="/">
-              <a className="md-hover-bb" onClick={handleMenu}>
+              <a className="md-hover-bb" onClick={() => setIsOpen(false)}>
                 Contact
               </a>
             </Link>
