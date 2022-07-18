@@ -1,9 +1,10 @@
 import Nav from "./Nav";
 import Footer from "./Footer";
+import styles from "../styles/layout.module.css";
 
 export default function Layout({ children }) {
   return (
-    <div className="grid grid-row-3 min-h-screen">
+    <div className={styles.div}>
       <Nav />
       {children}
       <Footer />
