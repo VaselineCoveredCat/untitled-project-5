@@ -1,0 +1,60 @@
+.main {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 6vw;
+}
+
+.div {
+  margin: 0 6vw;
+}
+
+.div p {
+  font-size: var(--h5);
+  text-align: center;
+}
+
+.article {
+  margin: 0 6vw 6vw 6vw;
+}
+
+.link {
+  margin-top: 6vw;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.link a:hover {
+  border-bottom: 2px solid var(--color-teal-6);
+}
+
+.error {
+  text-align: center;
+}
+
+/* 960px */
+@media (min-width: 60em) {
+  .div p {
+    max-width: 50%;
+    margin-left: auto;
+    text-align: right;
+  }
+}
+
+/* 1920px */
+@media (min-width: 120em) {
+  .main {
+    gap: 115px;
+  }
+
+  .div {
+    margin: 0 115px;
+  }
+
+  .article {
+    margin: 0 115px 115px 115px;
+  }
+
+  .link {
+    margin-top: 115px;
+  }
+}
