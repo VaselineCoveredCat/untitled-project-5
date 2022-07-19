@@ -1,0 +1,35 @@
+.article {
+  margin: 6vw;
+}
+
+.article form {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 6vw;
+  margin: 0 auto;
+}
+
+.article button {
+  padding: 0.2rem 0.6rem;
+  color: var(--color-teal-1);
+  background-color: var(--color-teal-6);
+}
+
+/* 640px */
+@media (min-width: 40em) {
+  .article form {
+    gap: 2vw;
+    max-width: 50%;
+  }
+}
+
+/* 1920px */
+@media (min-width: 120em) {
+  .article {
+    margin: 115px;
+  }
+
+  .article form {
+    gap: 38px;
+  }
+}
