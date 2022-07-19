@@ -1,14 +1,15 @@
 import Link from "next/link";
+import styles from "../styles/catalogue.module.css";
 
 export default function Catalogue(props) {
   return (
-    <ul className="gap-6 sm-gap-2 grid grid-col-2 md-grid-col-4 mt-6">
+    <ul className={styles.catalogue}>
       {props.items.map((item) => {
         return (
           <li key={item.id}>
             <Link href={`/collections/${item.slug}`}>
-              <a className="overflow-hidden text-ellipsis w-100 whitespace-nowrap">
-                <div className="overflow-hidden">
+              <a>
+                <div>
                   <picture>
                     <source
                       srcSet={`/images/${item.slug}.avif`}
@@ -21,7 +22,6 @@ export default function Catalogue(props) {
                     <img
                       alt=""
                       aria-hidden="true"
-                      className="aspect-9-16"
                       encoding="async"
                       src={`/images/${item.slug}.jpg`}
                     />
