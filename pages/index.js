@@ -4,6 +4,7 @@ import Link from "next/link";
 import { createClient } from "@supabase/supabase-js";
 import Banner from "../components/Banner";
 import Catalogue from "../components/Catalogue";
+import styles from "../styles/home.module.css";
 
 export async function getStaticProps() {
   const supabase = createClient(
@@ -27,17 +28,17 @@ export default function Home(props) {
         <title>Untitled Project 5</title>
       </Head>
 
-      <main className="gap-6 grid grid-col-1">
+      <main className={styles.main}>
         <Banner />
 
-        <div className="mx-6">
-          <p className="md-max-w-50 md-ml-auto text-h5 text-center md-text-right">
+        <div className={styles.div}>
+          <p>
             Fashion is what you're offered four times a year by designers. Style
             is what you choose.
           </p>
         </div>
 
-        <article className="mx-6">
+        <article className={styles.article}>
           <div>
             <h2>Dress Collections</h2>
           </div>
@@ -46,14 +47,14 @@ export default function Home(props) {
             <React.Fragment>
               <Catalogue items={props.items} />
 
-              <div className="mt-6 text-center text-upper">
+              <div className={styles.link}>
                 <Link href="/collections">
-                  <a className="md-hover-bb">See All Collections</a>
+                  <a>See All Collections</a>
                 </Link>
               </div>
             </React.Fragment>
           ) : (
-            <p className="text-center">Error occured</p>
+            <p className={styles.error}>Error occured</p>
           )}
         </article>
       </main>
