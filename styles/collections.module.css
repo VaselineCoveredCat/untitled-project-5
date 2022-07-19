@@ -1,0 +1,14 @@
+.article {
+  margin: 6vw;
+}
+
+.error {
+  text-align: center;
+}
+
+/* 1920px */
+@media (min-width: 120em) {
+  .article {
+    margin: 115px;
+  }
+}
