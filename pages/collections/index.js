@@ -2,6 +2,7 @@ import React from "react";
 import Head from "next/head";
 import { createClient } from "@supabase/supabase-js";
 import Catalogue from "../../components/Catalogue";
+import styles from "../../styles/collections.module.css";
 
 export async function getStaticProps() {
   const supabase = createClient(
@@ -26,14 +27,15 @@ export default function Collections(props) {
       </Head>
 
       <main>
-        <article className="mx-6">
+        <article className={styles.article}>
           <h1>The Collections</h1>
+
           {props.items ? (
             <React.Fragment>
               <Catalogue items={props.items} />
             </React.Fragment>
           ) : (
-            <p className="text-center">Error occured</p>
+            <p className={styles.error}>Error occured</p>
           )}
         </article>
       </main>
