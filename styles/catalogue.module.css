@@ -1,0 +1,40 @@
+.ul {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6vw;
+}
+
+.ul :is(a, div) {
+  overflow: hidden;
+}
+
+.ul a {
+  width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ul img {
+  aspect-ratio: 9/16;
+}
+
+/* 640px */
+@media (min-width: 40em) {
+  .ul {
+    gap: 2vw;
+  }
+}
+
+/* 960px */
+@media (min-width: 60em) {
+  .ul {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+/* 1920px */
+@media (min-width: 120em) {
+  .ul {
+    gap: 38px;
+  }
+}
