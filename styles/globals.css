@@ -220,14 +220,22 @@ html {
   -webkit-tap-highlight-color: transparent;
   scrollbar-width: thin;
   scrollbar-color: var(--color-teal-6) var(--color-teal-1);
+  block-size: 100%;
 }
 
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+  box-sizing: border-box;
   padding: 0;
   margin: 0;
+}
+
+*:where(:not(fieldset, meter, progress)) {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-origin: border-box;
+  background-size: cover;
   border-style: solid;
   border-width: 0;
 }
@@ -263,19 +271,24 @@ body {
   color: var(--color-teal-6);
   background-color: var(--color-teal-1);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  text-rendering: optimizeLegibility;
+  text-rendering: optimizeSpeed;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   transition: all 1s ease-out;
+  min-block-size: 100%;
 }
 
 main {
   display: block;
 }
 
-:is(h1, h2, .font-heading) {
+:where(h1, h2, h3, h4, h5) {
   font-family: var(--head);
   font-weight: 400;
+}
+
+:where(h1, h2, h3, h4, h5, p) {
+  overflow-wrap: break-word;
 }
 
 h1 {
@@ -302,8 +315,16 @@ a:focus {
   outline: var(--color-aquamarine-3) solid 4px;
 }
 
-img {
+:where(img, svg, video, canvas, audio, iframe, embed, object) {
   display: block;
+}
+
+:where(img, svg, video) {
+  max-inline-size: 100%;
+  block-size: auto;
+}
+
+img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -313,34 +334,83 @@ img {
   border-style: none;
 }
 
-ul {
+:where(ol, ul) {
   list-style: none;
 }
 
-button {
+:where(button, input, select, textarea),
+:where(input[type="file"])::-webkit-file-upload-button {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+  letter-spacing: inherit;
+}
+
+:where(button, details) {
+  touch-action: manipulation;
+  cursor: pointer;
+}
+
+:where(input[type="file"])::-webkit-file-upload-button {
+  cursor: pointer;
+}
+
+:where(input[type="file"])::-webkit-file-upload-button,
+:where(input[type="file"])::file-selector-button {
+  cursor: pointer;
+}
+
+:where(input[type="file"])::-webkit-file-upload-button {
   text-align: center;
+  -webkit-user-select: none;
+          user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+}
+
+:where(button, button[type], input[type="button"], input[type="submit"], input[type="reset"]),
+:where(input[type="file"])::-webkit-file-upload-button,
+:where(input[type="file"])::file-selector-button {
+  text-align: center;
+  -webkit-user-select: none;
+          user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+}
+
+:where(button, button[type], input[type="button"], input[type="submit"], input[type="reset"])[disabled] {
+  cursor: not-allowed;
+}
+
+details {
+  display: block;
+}
+
+summary {
+  display: list-item;
+}
+
+button {
   text-decoration: none;
   vertical-align: middle;
   background-color: transparent;
   border: none;
   outline: transparent solid 4px;
   -webkit-appearance: button;
-  -webkit-tap-highlight-color: transparent;
 }
 
 button:focus {
   outline: var(--color-aquamarine-3) solid 4px;
 }
 
-:is(button, details) {
-  cursor: pointer;
+textarea {
+  overflow: auto;
+  resize: none;
 }
 
-:is(button, [type="text"], [type="email"], textarea) {
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
-  color: inherit;
+:where(b, strong) {
+  font-weight: bolder;
 }
 
 .sr-only {
