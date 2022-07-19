@@ -1,58 +1,46 @@
 import { useState } from "react";
 import Link from "next/link";
+import styles from "../styles/nav.module.css";
 
 export default function Nav() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <header>
-      <nav className="m-6 sm-my-2">
+      <nav className={styles.nav}>
         <button
           aria-controls="menu"
           aria-expanded={isOpen}
           aria-haspopup="true"
-          className={`${isOpen ? "mb-6" : ""} md-hidden`}
+          className={isOpen ? styles.open : undefined}
           onClick={() => setIsOpen(!isOpen)}
         >
           <span className="sr-only">{isOpen ? "Close Menu" : "Open Menu"}</span>
           <img alt="" aria-hidden="true" src="/menu.svg" />
         </button>
 
-        <ul
-          className={`gap-6 grid md-grid grid-col-1 md-grid-col-4-auto ${
-            isOpen ? "" : "hidden"
-          } md-justify`}
-          id="menu"
-        >
-          <li className="bb-2 md-bb-0">
+        <ul className={isOpen ? styles.ul : styles.hidden} id="menu">
+          <li>
             <Link href="/">
-              <a className="md-hover-bb" onClick={() => setIsOpen(false)}>
-                Home
-              </a>
+              <a onClick={() => setIsOpen(false)}>Home</a>
             </Link>
           </li>
 
-          <li className="bb-2 md-bb-0">
+          <li>
             <Link href="/collections">
-              <a className="md-hover-bb" onClick={() => setIsOpen(false)}>
-                Collections
-              </a>
+              <a onClick={() => setIsOpen(false)}>Collections</a>
             </Link>
           </li>
 
-          <li className="bb-2 md-bb-0">
+          <li>
             <Link href="/">
-              <a className="md-hover-bb" onClick={() => setIsOpen(false)}>
-                About
-              </a>
+              <a onClick={() => setIsOpen(false)}>About</a>
             </Link>
           </li>
 
-          <li className="bb-2 md-bb-0">
+          <li>
             <Link href="/contact">
-              <a className="md-hover-bb" onClick={() => setIsOpen(false)}>
-                Contact
-              </a>
+              <a onClick={() => setIsOpen(false)}>Contact</a>
             </Link>
           </li>
         </ul>
