@@ -9,6 +9,23 @@
   margin: 0 auto;
 }
 
+.article :is([type="text"], [type="email"], textarea) {
+  display: block;
+  width: 100%;
+  padding: 0.2rem 0.6rem;
+  background-color: var(--color-teal-2);
+  border: none;
+  outline: transparent solid 4px;
+}
+
+.article :is([type="text"], [type="email"], textarea):focus {
+  outline: var(--color-aquamarine-3) solid 4px;
+}
+
+.article textarea {
+  resize: none;
+}
+
 .article button {
   padding: 0.2rem 0.6rem;
   color: var(--color-teal-1);
