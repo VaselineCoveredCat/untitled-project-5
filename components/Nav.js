@@ -20,7 +20,7 @@ export default function Nav() {
         </button>
 
         <ul
-          className={isOpen ? styles.ul : styles.hidden}
+          className={isOpen ? styles.mobile : styles.desktop}
           id="menu"
           role="list"
         >
