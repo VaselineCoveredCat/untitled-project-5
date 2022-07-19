@@ -1,0 +1,10 @@
+.article {
+  margin: 6vw;
+}
+
+/* 1920px */
+@media (min-width: 120em) {
+  .article {
+    margin: 115px;
+  }
+}
