@@ -29,7 +29,7 @@ export default function Contact() {
 
             <div>
               <label htmlFor="message">Message</label>
-              <textarea id="message" name="message"></textarea>
+              <textarea id="message" name="message" rows={8}></textarea>
             </div>
 
             <button>Send</button>
