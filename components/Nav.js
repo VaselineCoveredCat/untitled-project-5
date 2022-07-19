@@ -19,7 +19,11 @@ export default function Nav() {
           <img alt="" aria-hidden="true" src="/menu.svg" />
         </button>
 
-        <ul className={isOpen ? styles.ul : styles.hidden} id="menu">
+        <ul
+          className={isOpen ? styles.ul : styles.hidden}
+          id="menu"
+          role="list"
+        >
           <li>
             <Link href="/">
               <a onClick={() => setIsOpen(false)}>Home</a>
