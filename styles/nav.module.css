@@ -2,13 +2,13 @@
   margin: 6vw;
 }
 
-.ul {
+.mobile {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
   gap: 6vw;
 }
 
-.ul li {
+.mobile li {
   border-bottom: 2px solid var(--color-teal-6);
 }
 
@@ -16,7 +16,7 @@
   margin-bottom: 6vw;
 }
 
-.hidden {
+.desktop {
   display: none;
 }
 
@@ -33,18 +33,18 @@
     display: none;
   }
 
-  .hidden {
+  .desktop {
     display: grid;
     grid-template-columns: repeat(4, auto);
-    gap: 6vw;
+    gap: 2vw;
     justify-content: start;
   }
 
-  .hidden li {
+  .desktop li {
     border: none;
   }
 
-  .hidden a:hover {
+  .desktop a:hover {
     border-bottom: 2px solid var(--color-teal-6);
   }
 }
@@ -55,7 +55,7 @@
     margin: 38px 115px;
   }
 
-  .hidden {
-    gap: 115px;
+  .desktop {
+    gap: 38px;
   }
 }
