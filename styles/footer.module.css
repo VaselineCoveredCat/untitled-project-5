@@ -1,0 +1,20 @@
+.footer {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 6vw;
+  padding: 6vw;
+  color: var(--color-teal-1);
+  background-color: var(--color-teal-6);
+}
+
+.footer p {
+  text-align: center;
+}
+
+/* 1920px */
+@media (min-width: 120em) {
+  .footer {
+    gap: 115px;
+    padding: 115px;
+  }
+}
