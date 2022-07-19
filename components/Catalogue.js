@@ -3,7 +3,7 @@ import styles from "../styles/catalogue.module.css";
 
 export default function Catalogue(props) {
   return (
-    <ul className={styles.ul}>
+    <ul className={styles.ul} role="list">
       {props.items.map((item) => {
         return (
           <li key={item.id}>
