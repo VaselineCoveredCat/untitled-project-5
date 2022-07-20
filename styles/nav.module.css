@@ -1,19 +1,24 @@
+.header {
+  position: relative;
+}
+
 .nav {
   margin: 6vw;
 }
 
 .mobile {
+  position: absolute;
+  top: 100%;
+  left: 0;
   display: grid;
   grid-template-columns: minmax(0, 1fr);
-  gap: 6vw;
+  gap: 12vw;
+  padding: 12vw;
+  background-color: var(--color-teal-1);
 }
 
 .mobile li {
   border-bottom: 2px solid var(--color-teal-6);
-}
-
-.open {
-  margin-bottom: 6vw;
 }
 
 .desktop {
@@ -24,6 +29,11 @@
 @media (min-width: 40em) {
   .nav {
     margin: 2vw 6vw;
+  }
+
+  .mobile {
+    gap: 6vw;
+    padding: 6vw;
   }
 }
 
