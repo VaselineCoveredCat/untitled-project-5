@@ -12,7 +12,7 @@ export async function getStaticProps() {
     process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
   );
 
-  let res = await supabase
+  const res = await supabase
     .from("dress")
     .select("*")
     .order("name", { ascending: true })
