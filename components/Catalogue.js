@@ -27,10 +27,10 @@ export default function Catalogue(props) {
                     />
                   </picture>
                 </div>
-                <span>{item.name}</span>
+                {item.name}
                 <br />
                 <span className="sr-only">Price</span>
-                <b>Rp {item.price}</b>
+                {`Rp ${item.price}`}
               </a>
             </Link>
           </li>
