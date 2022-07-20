@@ -6,16 +6,15 @@ export default function Nav() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header>
+    <header className={styles.header}>
       <nav className={styles.nav}>
         <button
           aria-controls="menu"
           aria-expanded={isOpen}
+          aria-label={isOpen ? "close menu" : "open menu"}
           aria-haspopup="true"
-          className={isOpen ? styles.open : undefined}
           onClick={() => setIsOpen(!isOpen)}
         >
-          <span className="sr-only">{isOpen ? "Close Menu" : "Open Menu"}</span>
           <img alt="" aria-hidden="true" src="/menu.svg" />
         </button>
 
