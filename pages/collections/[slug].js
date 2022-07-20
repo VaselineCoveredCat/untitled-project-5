@@ -15,7 +15,7 @@ export async function getStaticPaths() {
     return { params: { slug: item.slug } };
   });
 
-  return { paths: slugs, fallback: false };
+  return { fallback: false, paths: slugs };
 }
 
 export async function getStaticProps(context) {
