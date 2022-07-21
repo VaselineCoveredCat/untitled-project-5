@@ -1,8 +1,7 @@
 .footer {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
-  gap: 6vw;
-  padding: 6vw;
+  padding: var(--space-m);
   color: var(--color-teal-1);
   background-color: var(--color-teal-6);
 }
@@ -11,10 +10,16 @@
   text-align: center;
 }
 
-/* 1920px */
-@media (min-width: 120em) {
+/* 640px */
+@media (min-width: 40em) {
   .footer {
-    gap: 115px;
-    padding: 115px;
+    padding: var(--space-l);
+  }
+}
+
+/* 960px */
+@media (min-width: 60em) {
+  .footer {
+    padding: var(--space-xl);
   }
 }
