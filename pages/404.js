@@ -9,8 +9,8 @@ export default function Lost() {
         <title>404 - Untitled Project 5</title>
       </Head>
 
-      <main>
-        <article className={styles.lost}>
+      <main className={styles.main}>
+        <article className={styles.article}>
           <h1>404</h1>
           <p>
             I'm afraid you've found a page that doesn't exist. That can happen
