@@ -10,156 +10,182 @@
   --gray-9: #262626;
   --gray-10: #1f1f1f;
   --gray-11: #141414;
+
   --color-gray-1: #f6f6f6;
   --color-gray-2: #e2e2e2;
   --color-gray-3: #8b8b8b;
   --color-gray-4: #6f6f6f;
   --color-gray-5: #3e3e3e;
   --color-gray-6: #222222;
+
   --color-rose-1: #fff7f9;
   --color-rose-2: #ffdce5;
   --color-rose-3: #ff3b8d;
   --color-rose-4: #db0072;
   --color-rose-5: #800040;
   --color-rose-6: #4c0023;
+
   --color-raspberry-1: #fff8f8;
   --color-raspberry-2: #ffdddf;
   --color-raspberry-3: #ff426c;
   --color-raspberry-4: #de0051;
   --color-raspberry-5: #82002c;
   --color-raspberry-6: #510018;
+
   --color-red-1: #fff8f6;
   --color-red-2: #ffddd8;
   --color-red-3: #ff4647;
   --color-red-4: #e0002b;
   --color-red-5: #830014;
   --color-red-6: #530003;
+
   --color-orange-1: #fff8f5;
   --color-orange-2: #ffded1;
   --color-orange-3: #fd4d00;
   --color-orange-4: #cd3c00;
   --color-orange-5: #752100;
   --color-orange-6: #401600;
+
   --color-cinnamon-1: #fff8f3;
   --color-cinnamon-2: #ffdfc6;
   --color-cinnamon-3: #d57300;
   --color-cinnamon-4: #ac5c00;
   --color-cinnamon-5: #633300;
   --color-cinnamon-6: #371d00;
+
   --color-amber-1: #fff8ef;
   --color-amber-2: #ffe0b2;
   --color-amber-3: #b98300;
   --color-amber-4: #926700;
   --color-amber-5: #523800;
   --color-amber-6: #302100;
+
   --color-yellow-1: #fff9e5;
   --color-yellow-2: #ffe53e;
   --color-yellow-3: #9c8b00;
   --color-yellow-4: #7d6f00;
   --color-yellow-5: #463d00;
   --color-yellow-6: #292300;
+
   --color-lime-1: #f7ffac;
   --color-lime-2: #d5f200;
   --color-lime-3: #819300;
   --color-lime-4: #677600;
   --color-lime-5: #394100;
   --color-lime-6: #222600;
+
   --color-chartreuse-1: #e5ffc3;
   --color-chartreuse-2: #98fb00;
   --color-chartreuse-3: #5c9b00;
   --color-chartreuse-4: #497c00;
   --color-chartreuse-5: #264500;
   --color-chartreuse-6: #182600;
+
   --color-green-1: #e0ffd9;
   --color-green-2: #72ff6c;
   --color-green-3: #00a21f;
   --color-green-4: #008217;
   --color-green-5: #004908;
   --color-green-6: #062800;
+
   --color-emerald-1: #dcffe6;
   --color-emerald-2: #5dffa2;
   --color-emerald-3: #00a05a;
   --color-emerald-4: #008147;
   --color-emerald-5: #004825;
   --color-emerald-6: #002812;
+
   --color-aquamarine-1: #daffef;
   --color-aquamarine-2: #42ffc6;
   --color-aquamarine-3: #009f78;
   --color-aquamarine-4: #007f5f;
   --color-aquamarine-5: #004734;
   --color-aquamarine-6: #00281b;
+
   --color-teal-1: #d7fff7;
   --color-teal-2: #00ffe4;
   --color-teal-3: #009e8c;
   --color-teal-4: #007c6e;
   --color-teal-5: #00443c;
   --color-teal-6: #002722;
+
   --color-cyan-1: #c4fffe;
   --color-cyan-2: #00fafb;
   --color-cyan-3: #00999a;
   --color-cyan-4: #007a7b;
   --color-cyan-5: #004344;
   --color-cyan-6: #002525;
+
   --color-powder-1: #dafaff;
   --color-powder-2: #8df0ff;
   --color-powder-3: #0098a9;
   --color-powder-4: #007987;
   --color-powder-5: #004048;
   --color-powder-6: #002227;
+
   --color-sky-1: #e3f7ff;
   --color-sky-2: #aee9ff;
   --color-sky-3: #0094b4;
   --color-sky-4: #007590;
   --color-sky-5: #00404f;
   --color-sky-6: #001f28;
+
   --color-cerulean-1: #e8f6ff;
   --color-cerulean-2: #b9e3ff;
   --color-cerulean-3: #0092c5;
   --color-cerulean-4: #00749d;
   --color-cerulean-5: #003c54;
   --color-cerulean-6: #001d2a;
+
   --color-azure-1: #e8f2ff;
   --color-azure-2: #c6e0ff;
   --color-azure-3: #008fdb;
   --color-azure-4: #0071af;
   --color-azure-5: #003b5e;
   --color-azure-6: #001c30;
+
   --color-blue-1: #f0f4ff;
   --color-blue-2: #d4e0ff;
   --color-blue-3: #0089fc;
   --color-blue-4: #006dca;
   --color-blue-5: #00386d;
   --color-blue-6: #001a39;
+
   --color-indigo-1: #f3f3ff;
   --color-indigo-2: #deddff;
   --color-indigo-3: #657eff;
   --color-indigo-4: #0061fc;
   --color-indigo-5: #00328a;
   --color-indigo-6: #001649;
+
   --color-violet-1: #f7f1ff;
   --color-violet-2: #e8daff;
   --color-violet-3: #9b70ff;
   --color-violet-4: #794aff;
   --color-violet-5: #2d0fbf;
   --color-violet-6: #0b0074;
+
   --color-purple-1: #fdf4ff;
   --color-purple-2: #f7d9ff;
   --color-purple-3: #d150ff;
   --color-purple-4: #b01fe3;
   --color-purple-5: #660087;
   --color-purple-6: #3a004f;
+
   --color-magenta-1: #fff3fc;
   --color-magenta-2: #ffd7f6;
   --color-magenta-3: #f911e0;
   --color-magenta-4: #ca00b6;
   --color-magenta-5: #740068;
   --color-magenta-6: #44003c;
+
   --color-pink-1: #fff7fb;
   --color-pink-2: #ffdcec;
   --color-pink-3: #ff2fb2;
   --color-pink-4: #d2008f;
   --color-pink-5: #790051;
   --color-pink-6: #4b0030;
+
   --space-3xs: clamp(0.31rem, calc(0.30rem + 0.06vw), 0.38rem);
   --space-2xs: clamp(0.56rem, calc(0.54rem + 0.12vw), 0.69rem);
   --space-xs: clamp(0.88rem, calc(0.85rem + 0.18vw), 1.06rem);
@@ -169,6 +195,37 @@
   --space-xl: clamp(3.38rem, calc(3.27rem + 0.71vw), 4.13rem);
   --space-2xl: clamp(4.50rem, calc(4.36rem + 0.95vw), 5.50rem);
   --space-3xl: clamp(6.75rem, calc(6.54rem + 1.43vw), 8.25rem);
+
+  --space-3xs-2xs: clamp(0.31rem, calc(0.26rem + 0.36vw), 0.69rem);
+  --space-2xs-xs: clamp(0.56rem, calc(0.49rem + 0.48vw), 1.06rem);
+  --space-xs-s: clamp(0.88rem, calc(0.80rem + 0.48vw), 1.38rem);
+  --space-s-m: clamp(1.13rem, calc(0.99rem + 0.89vw), 2.06rem);
+  --space-m-l: clamp(1.69rem, calc(1.54rem + 1.01vw), 2.75rem);
+  --space-l-xl: clamp(2.25rem, calc(1.98rem + 1.79vw), 4.13rem);
+  --space-xl-2xl: clamp(3.38rem, calc(3.07rem + 2.02vw), 5.50rem);
+  --space-2xl-3xl: clamp(4.50rem, calc(3.96rem + 3.57vw), 8.25rem);
+
+  --space-3xs-xs: clamp(0.31rem, calc(0.21rem + 0.71vw), 1.06rem);
+  --space-2xs-s: clamp(0.56rem, calc(0.45rem + 0.77vw), 1.38rem);
+  --space-xs-m: clamp(0.88rem, calc(0.71rem + 1.13vw), 2.06rem);
+  --space-s-l: clamp(1.13rem, calc(0.89rem + 1.55vw), 2.75rem);
+  --space-m-xl: clamp(1.69rem, calc(1.34rem + 2.32vw), 4.13rem);
+  --space-l-2xl: clamp(2.25rem, calc(1.79rem + 3.10vw), 5.50rem);
+  --space-xl-3xl: clamp(3.38rem, calc(2.68rem + 4.64vw), 8.25rem);
+
+  --space-3xs-s: clamp(0.31rem, calc(0.16rem + 1.01vw), 1.38rem);
+  --space-2xs-m: clamp(0.56rem, calc(0.35rem + 1.43vw), 2.06rem);
+  --space-xs-l: clamp(0.88rem, calc(0.61rem + 1.79vw), 2.75rem);
+  --space-s-xl: clamp(1.13rem, calc(0.70rem + 2.86vw), 4.13rem);
+  --space-m-2xl: clamp(1.69rem, calc(1.14rem + 3.63vw), 5.50rem);
+  --space-l-3xl: clamp(2.25rem, calc(1.39rem + 5.71vw), 8.25rem);
+
+  --space-3xs-m: clamp(0.31rem, calc(0.06rem + 1.67vw), 2.06rem);
+  --space-2xs-l: clamp(0.56rem, calc(0.25rem + 2.08vw), 2.75rem);
+  --space-xs-xl: clamp(0.88rem, calc(0.41rem + 3.10vw), 4.13rem);
+  --space-s-2xl: clamp(1.13rem, calc(0.50rem + 4.17vw), 5.50rem);
+  --space-m-3xl: clamp(1.69rem, calc(0.75rem + 6.25vw), 8.25rem);
+
   --h1: clamp(2.8rem, calc(2.37rem + 2.85vw), 5.79rem);
   --h2: clamp(2.33rem, calc(2.05rem + 1.91vw), 4.34rem);
   --h3: clamp(1.94rem, calc(1.76rem + 1.25vw), 3.26rem);
@@ -176,6 +233,7 @@
   --h5: clamp(1.35rem, calc(1.28rem + 0.46vw), 1.83rem);
   --p: clamp(1.13rem, calc(1.09rem + 0.24vw), 1.38rem);
   --small: clamp(0.94rem, calc(0.92rem + 0.09vw), 1.03rem);
+
   --head: "Viaoda Libre", "Viaoda Libre-fallback", serif;
   --body: "Nanum Myeongjo", "Nanum Myeongjo-fallback", serif;
 }
