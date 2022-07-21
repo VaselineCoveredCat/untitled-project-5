@@ -9,7 +9,7 @@ export default function Contact() {
         <title>Contact Us - Untitled Project 5</title>
       </Head>
 
-      <main>
+      <main className={styles.main}>
         <article className={styles.article}>
           <form>
             <div>
