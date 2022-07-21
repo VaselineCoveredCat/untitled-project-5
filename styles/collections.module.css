@@ -1,6 +1,9 @@
-.article,
-.page {
-  margin: 6vw;
+:is(.article, .page) {
+  margin: var(--space-s);
+}
+
+.article h1 {
+  margin-bottom: var(--space-s);
 }
 
 .error {
@@ -10,18 +13,29 @@
 .page {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, auto));
-  gap: 6vw;
+  gap: var(--space-s);
   justify-content: center;
 }
 
 .page li:first-of-type a {
+  color: var(--color-teal-3);
   pointer-events: none;
 }
 
-/* 1920px */
-@media (min-width: 120em) {
-  .article,
+/* 640px */
+@media (min-width: 40em) {
+  :is(.article, .page) {
+    margin: var(--space-l);
+  }
+
   .page {
-    margin: 115px;
+    gap: var(--space-m);
+  }
+}
+
+/* 960px */
+@media (min-width: 60em) {
+  :is(.article, .page) {
+    margin: var(--space-xl);
   }
 }
