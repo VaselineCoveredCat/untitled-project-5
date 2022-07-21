@@ -1,7 +1,7 @@
 .ul {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 6vw;
+  gap: var(--space-s);
 }
 
 .ul :is(a, div) {
@@ -14,6 +14,10 @@
   white-space: nowrap;
 }
 
+.ul div {
+  margin-bottom: var(--space-xs);
+}
+
 .ul img {
   aspect-ratio: 9/16;
 }
@@ -21,7 +25,7 @@
 /* 640px */
 @media (min-width: 40em) {
   .ul {
-    gap: 2vw;
+    gap: var(--space-l) var(--space-s);
   }
 }
 
@@ -29,12 +33,6 @@
 @media (min-width: 60em) {
   .ul {
     grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
-}
-
-/* 1920px */
-@media (min-width: 120em) {
-  .ul {
-    gap: 38px;
+    gap: var(--space-xl) var(--space-s);
   }
 }
