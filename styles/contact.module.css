@@ -1,11 +1,11 @@
 .article {
-  margin: 6vw;
+  margin: var(--space-s);
 }
 
 .article form {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
-  gap: 6vw;
+  gap: var(--space-s);
   margin: 0 auto;
 }
 
@@ -23,26 +23,29 @@
 }
 
 .article button {
-  padding: 0.2rem 0.6rem;
+  padding: 0.4rem 1rem;
   color: var(--color-teal-1);
   background-color: var(--color-teal-6);
 }
 
 /* 640px */
 @media (min-width: 40em) {
+  .main {
+    align-self: center;
+  }
+
+  .article {
+    margin: var(--space-l);
+  }
+
   .article form {
-    gap: 2vw;
     max-width: 50%;
   }
 }
 
-/* 1920px */
-@media (min-width: 120em) {
+/* 960px */
+@media (min-width: 60em) {
   .article {
-    margin: 115px;
-  }
-
-  .article form {
-    gap: 38px;
+    margin: var(--space-xl);
   }
 }
