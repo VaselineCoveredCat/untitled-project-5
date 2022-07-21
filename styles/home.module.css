@@ -1,11 +1,11 @@
 .main {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
-  gap: 6vw;
+  gap: var(--space-l);
 }
 
 .div {
-  margin: 0 6vw;
+  margin: 0 var(--space-s);
 }
 
 .div p {
@@ -14,11 +14,15 @@
 }
 
 .article {
-  margin: 0 6vw 6vw 6vw;
+  margin: 0 var(--space-s) var(--space-l) var(--space-s);
+}
+
+.article h2 {
+  margin-bottom: var(--space-s);
 }
 
 .link {
-  margin-top: 6vw;
+  margin-top: var(--space-l);
   text-align: center;
 }
 
@@ -30,30 +34,34 @@
   text-align: center;
 }
 
+/* 640px */
+@media (min-width: 40em) {
+  .div {
+    margin: 0 var(--space-l);
+  }
+
+  .article {
+    margin: 0 var(--space-l) var(--space-l) var(--space-l);
+  }
+}
+
 /* 960px */
 @media (min-width: 60em) {
+  .main {
+    gap: var(--space-xl);
+  }
+
+  .div {
+    margin: 0 var(--space-xl);
+  }
+
   .div p {
     max-width: 50%;
     margin-left: auto;
     text-align: right;
   }
-}
-
-/* 1920px */
-@media (min-width: 120em) {
-  .main {
-    gap: 115px;
-  }
-
-  .div {
-    margin: 0 115px;
-  }
 
   .article {
-    margin: 0 115px 115px 115px;
-  }
-
-  .link {
-    margin-top: 115px;
+    margin: 0 var(--space-xl) var(--space-xl) var(--space-xl);
   }
 }
