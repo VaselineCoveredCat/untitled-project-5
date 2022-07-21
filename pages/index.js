@@ -39,9 +39,7 @@ export default function Home(props) {
         </div>
 
         <article className={styles.article}>
-          <div>
-            <h2>Dress Collections</h2>
-          </div>
+          <h2>Dress Collections</h2>
 
           {props.items ? (
             <React.Fragment>
