@@ -1,6 +1,6 @@
 :is(.article, .div, .form > div) {
   display: grid;
-  gap: 6vw;
+  gap: var(--space-s);
 }
 
 :is(.article, .div) {
@@ -8,7 +8,7 @@
 }
 
 .article {
-  margin: 6vw;
+  margin: var(--space-s);
 }
 
 .article img {
@@ -40,7 +40,7 @@
 
 .form [type="radio"] {
   position: relative;
-  width: 14vw;
+  width: var(--space-xl);
   height: auto;
   aspect-ratio: 1/1;
   font-family: inherit;
@@ -86,44 +86,15 @@
 
 /* 640px */
 @media (min-width: 40em) {
-  :is(.article, .div, .form > div) {
-    gap: 2vw;
-  }
-
   .article {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .form [type="radio"] {
-    width: 8vw;
+    margin: var(--space-l);
   }
 }
 
 /* 960px */
 @media (min-width: 60em) {
-  .form [type="radio"] {
-    width: 6vw;
-  }
-}
-
-/* 1280px */
-@media (min-width: 80em) {
-  .form [type="radio"] {
-    width: 4vw;
-  }
-}
-
-/* 1920px */
-@media (min-width: 120em) {
-  :is(.article, .div, .form > div) {
-    gap: 38px;
-  }
-
   .article {
-    margin: 115px;
-  }
-
-  .form [type="radio"] {
-    width: 77px;
+    margin: var(--space-xl);
   }
 }
