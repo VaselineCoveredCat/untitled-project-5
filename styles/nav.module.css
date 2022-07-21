@@ -3,7 +3,7 @@
 }
 
 .nav {
-  margin: 6vw;
+  margin: var(--space-s);
 }
 
 .mobile {
@@ -12,8 +12,8 @@
   left: 0;
   display: grid;
   grid-template-columns: minmax(0, 1fr);
-  gap: 12vw;
-  padding: 12vw;
+  gap: var(--space-l);
+  padding: var(--space-l);
   background-color: var(--color-teal-1);
 }
 
@@ -28,17 +28,16 @@
 /* 640px */
 @media (min-width: 40em) {
   .nav {
-    margin: 2vw 6vw;
-  }
-
-  .mobile {
-    gap: 6vw;
-    padding: 6vw;
+    margin: var(--space-s) var(--space-l);
   }
 }
 
 /* 960px */
 @media (min-width: 60em) {
+  .nav {
+    margin: var(--space-s) var(--space-xl);
+  }
+
   .nav button {
     display: none;
   }
@@ -46,7 +45,7 @@
   .desktop {
     display: grid;
     grid-template-columns: repeat(4, auto);
-    gap: 2vw;
+    gap: var(--space-m);
     justify-content: start;
   }
 
@@ -56,16 +55,5 @@
 
   .desktop a:hover {
     border-bottom: 2px solid var(--color-teal-6);
-  }
-}
-
-/* 1920px */
-@media (min-width: 120em) {
-  .nav {
-    margin: 38px 115px;
-  }
-
-  .desktop {
-    gap: 38px;
   }
 }
