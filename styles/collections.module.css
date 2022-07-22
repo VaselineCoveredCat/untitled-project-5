@@ -1,5 +1,5 @@
 :is(.article, .page) {
-  margin: var(--space-s);
+  margin: var(--space-s-xl);
 }
 
 .article h1 {
@@ -13,29 +13,16 @@
 .page {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, auto));
-  gap: var(--space-s);
+  gap: var(--space-s-m);
   justify-content: center;
 }
 
-.page li:first-of-type a {
+.page a[href]:hover {
+  border-bottom: 2px solid var(--color-teal-6);
+}
+
+.page a[aria-disabled] {
   color: var(--color-teal-3);
   pointer-events: none;
-}
-
-/* 640px */
-@media (min-width: 40em) {
-  :is(.article, .page) {
-    margin: var(--space-l);
-  }
-
-  .page {
-    gap: var(--space-m);
-  }
-}
-
-/* 960px */
-@media (min-width: 60em) {
-  :is(.article, .page) {
-    margin: var(--space-xl);
-  }
+  touch-action: none;
 }
