@@ -19,7 +19,7 @@ export async function getStaticProps() {
 
   const totalPages = Math.ceil(res.count / 20);
 
-  return { props: { items: res.data, pages: totalPages } };
+  return { props: { items: res.data, totalPages } };
 }
 
 export default function Collections(props) {
@@ -41,12 +41,12 @@ export default function Collections(props) {
                 <nav aria-label="pagination">
                   <ul className={styles.page}>
                     <li>
-                      <Link href="/collections">
-                        <a aria-disabled="true">Prev</a>
-                      </Link>
+                      <a aria-disabled="true" role="link">
+                        Prev
+                      </a>
                     </li>
 
-                    <li>{`Page 1 of ${props.pages}`}</li>
+                    <li>{`Page 1 of ${props.totalPages}`}</li>
 
                     <li>
                       <Link href="/collections/page/2">
