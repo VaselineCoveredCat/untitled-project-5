@@ -1,8 +1,10 @@
 import { useState } from "react";
+import { useRouter } from "next/router";
 import Link from "next/link";
 import styles from "../styles/nav.module.css";
 
 export default function Nav() {
+  const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -11,11 +13,11 @@ export default function Nav() {
         <button
           aria-controls="menu"
           aria-expanded={isOpen}
-          aria-label={isOpen ? "close menu" : "open menu"}
           aria-haspopup="true"
           onClick={() => setIsOpen(!isOpen)}
         >
-          <img alt="" aria-hidden="true" src="/menu.svg" />
+          <img alt="" aria-hidden="true" focusable="false" src="/menu.svg" />
+          <span className="sr-only">{isOpen ? "Close Menu" : "Open Menu"}</span>
         </button>
 
         <ul
@@ -25,25 +27,47 @@ export default function Nav() {
         >
           <li>
             <Link href="/">
-              <a onClick={() => setIsOpen(false)}>Home</a>
+              <a
+                aria-current={router.asPath === "/" ? "page" : undefined}
+                onClick={() => setIsOpen(false)}
+              >
+                Home
+              </a>
             </Link>
           </li>
 
           <li>
             <Link href="/collections">
-              <a onClick={() => setIsOpen(false)}>Collections</a>
+              <a
+                aria-current={
+                  router.asPath === "/collections" ? "page" : undefined
+                }
+                onClick={() => setIsOpen(false)}
+              >
+                Collections
+              </a>
             </Link>
           </li>
 
           <li>
             <Link href="/">
-              <a onClick={() => setIsOpen(false)}>About</a>
+              <a
+                aria-current={router.asPath === "/" ? "page" : undefined}
+                onClick={() => setIsOpen(false)}
+              >
+                About
+              </a>
             </Link>
           </li>
 
           <li>
             <Link href="/contact">
-              <a onClick={() => setIsOpen(false)}>Contact</a>
+              <a
+                aria-current={router.asPath === "/contact" ? "page" : undefined}
+                onClick={() => setIsOpen(false)}
+              >
+                Contact
+              </a>
             </Link>
           </li>
         </ul>
