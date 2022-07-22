@@ -1,7 +1,7 @@
 .ul {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: var(--space-s);
+  gap: var(--space-s-xl) var(--space-s);
 }
 
 .ul :is(a, div) {
@@ -22,17 +22,9 @@
   aspect-ratio: 9/16;
 }
 
-/* 640px */
-@media (min-width: 40em) {
-  .ul {
-    gap: var(--space-l) var(--space-s);
-  }
-}
-
 /* 960px */
 @media (min-width: 60em) {
   .ul {
     grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: var(--space-xl) var(--space-s);
   }
 }
