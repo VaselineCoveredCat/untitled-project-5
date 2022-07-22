@@ -1,25 +1,11 @@
 .footer {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
-  padding: var(--space-m);
+  padding: var(--space-m-xl);
   color: var(--color-teal-1);
   background-color: var(--color-teal-6);
 }
 
 .footer p {
   text-align: center;
-}
-
-/* 640px */
-@media (min-width: 40em) {
-  .footer {
-    padding: var(--space-l);
-  }
-}
-
-/* 960px */
-@media (min-width: 60em) {
-  .footer {
-    padding: var(--space-xl);
-  }
 }
