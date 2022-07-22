@@ -3,23 +3,9 @@
 }
 
 .article {
-  margin: var(--space-s);
+  margin: var(--space-s-xl);
 }
 
 .article p {
   max-width: 80ch;
-}
-
-/* 640px */
-@media (min-width: 40em) {
-  .article {
-    margin: var(--space-l);
-  }
-}
-
-/* 960px */
-@media (min-width: 60em) {
-  .article {
-    margin: var(--space-xl);
-  }
 }
