@@ -4,6 +4,8 @@ export default function Document() {
   return (
     <Html lang="en-US">
       <Head>
+        <link href="/favicon.svg" rel="icon" type="image/svg+xml" />
+        <link href="/favicon.png" rel="icon" type="image/png" />
         <link
           as="font"
           crossOrigin="true"
