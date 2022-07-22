@@ -1,5 +1,5 @@
 .article {
-  margin: var(--space-s);
+  margin: var(--space-s-xl);
 }
 
 .article form {
@@ -34,18 +34,7 @@
     align-self: center;
   }
 
-  .article {
-    margin: var(--space-l);
-  }
-
   .article form {
     max-width: 50%;
-  }
-}
-
-/* 960px */
-@media (min-width: 60em) {
-  .article {
-    margin: var(--space-xl);
   }
 }
