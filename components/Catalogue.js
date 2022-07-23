@@ -22,8 +22,11 @@ export default function Catalogue(props) {
                     <img
                       alt=""
                       aria-hidden="true"
-                      encoding="async"
+                      decoding="async"
+                      height={2360}
+                      loading="lazy"
                       src={`/images/${item.slug}.jpg`}
+                      width={1480}
                     />
                   </picture>
                 </div>
