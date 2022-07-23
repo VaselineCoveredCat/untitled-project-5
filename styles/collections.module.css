@@ -1,5 +1,5 @@
 :is(.article, .page) {
-  margin: var(--space-s-xl);
+  margin: var(--space-s);
 }
 
 .article h1 {
@@ -13,7 +13,7 @@
 .page {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, auto));
-  gap: var(--space-s-m);
+  gap: var(--space-s);
   justify-content: center;
 }
 
@@ -25,4 +25,22 @@
   color: var(--color-teal-3);
   pointer-events: none;
   touch-action: none;
+}
+
+/* 640px */
+@media (min-width: 40em) {
+  :is(.article, .page) {
+    margin: var(--space-l);
+  }
+
+  .page {
+    gap: var(--space-m);
+  }
+}
+
+/* 960px */
+@media (min-width: 60em) {
+  :is(.article, .page) {
+    margin: var(--space-xl);
+  }
 }
