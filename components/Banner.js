@@ -9,8 +9,10 @@ export default function Banner() {
         <img
           alt=""
           aria-hidden="true"
-          encoding="async"
+          decoding="async"
+          height={1280}
           src="/images/pexels-pixabay-413885.jpg"
+          width={1920}
         />
       </picture>
 
