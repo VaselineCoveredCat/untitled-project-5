@@ -46,8 +46,10 @@ export default function Product(props) {
             <img
               alt=""
               aria-hidden="true"
-              encoding="async"
+              decoding="async"
+              height={2360}
               src={`/images/${props.items[0].slug}.jpg`}
+              width={1480}
             />
           </picture>
 
