@@ -8,7 +8,7 @@
 }
 
 .article {
-  margin: var(--space-s-xl);
+  margin: var(--space-s);
 }
 
 .article img {
@@ -88,5 +88,13 @@
 @media (min-width: 40em) {
   .article {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin: var(--space-l);
+  }
+}
+
+/* 960px */
+@media (min-width: 60em) {
+  .article {
+    margin: var(--space-xl);
   }
 }
