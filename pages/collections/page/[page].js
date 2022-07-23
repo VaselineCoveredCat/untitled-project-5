@@ -46,7 +46,7 @@ export default function Page(props) {
   return (
     <React.Fragment>
       <Head>
-        <title>Collections - Untitled Project 5</title>
+        <title>{`Collections Page ${props.currentPage} - Untitled Project 5`}</title>
       </Head>
 
       <main>
