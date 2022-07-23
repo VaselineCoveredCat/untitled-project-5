@@ -13,7 +13,7 @@
 
 .header div {
   align-self: center;
-  margin: var(--space-s) var(--space-s-xl);
+  margin: var(--space-s);
   text-transform: uppercase;
 }
 
@@ -29,6 +29,17 @@
 @media (min-width: 40em) {
   .header img {
     aspect-ratio: 21/9;
+  }
+
+  .header div {
+    margin: var(--space-s) var(--space-l);
+  }
+}
+
+/* 960px */
+@media (min-width: 60em) {
+  .header div {
+    margin: var(--space-s) var(--space-xl);
   }
 }
 
