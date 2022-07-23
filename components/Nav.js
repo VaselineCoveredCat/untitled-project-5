@@ -17,7 +17,7 @@ export default function Nav() {
           onClick={() => setIsOpen(!isOpen)}
         >
           <img alt="" aria-hidden="true" focusable="false" src="/menu.svg" />
-          <span className="sr-only">{isOpen ? "Close Menu" : "Open Menu"}</span>
+          <span className="sr-only">Menu</span>
         </button>
 
         <ul
@@ -45,17 +45,6 @@ export default function Nav() {
                 onClick={() => setIsOpen(false)}
               >
                 Collections
-              </a>
-            </Link>
-          </li>
-
-          <li>
-            <Link href="/">
-              <a
-                aria-current={router.asPath === "/" ? "page" : undefined}
-                onClick={() => setIsOpen(false)}
-              >
-                About
               </a>
             </Link>
           </li>
