@@ -1,6 +1,7 @@
 .footer {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
+  place-items: center;
   padding: var(--space-m);
   color: var(--color-teal-1);
   background-color: var(--color-teal-6);
@@ -8,6 +9,11 @@
 
 .footer p {
   text-align: center;
+}
+
+.footer img {
+  filter: invert(41%) sepia(63%) saturate(3710%) hue-rotate(143deg)
+    brightness(93%) contrast(102%);
 }
 
 /* 640px */
