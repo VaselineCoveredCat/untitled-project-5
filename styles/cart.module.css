@@ -1,0 +1,42 @@
+.main {
+  align-self: center;
+}
+
+.article {
+  margin: var(--space-s);
+}
+
+.article h1 {
+  margin-bottom: var(--space-m);
+}
+
+.article p {
+  margin-bottom: var(--space-xs);
+  text-align: center;
+}
+
+.article a {
+  padding: 0.6rem 1rem;
+  color: var(--color-teal-1);
+  background-color: var(--color-teal-6);
+  border: 2px solid var(--color-teal-6);
+}
+
+.article a:hover {
+  color: var(--color-teal-6);
+  background-color: transparent;
+}
+
+/* 640px */
+@media (min-width: 40em) {
+  .article {
+    margin: var(--space-l);
+  }
+}
+
+/* 960px */
+@media (min-width: 60em) {
+  .article {
+    margin: var(--space-xl);
+  }
+}
