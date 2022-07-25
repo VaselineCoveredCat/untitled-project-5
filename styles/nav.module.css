@@ -1,9 +1,22 @@
 .header {
   position: relative;
+  box-shadow: var(--shadow);
 }
 
 .nav {
+  display: flex;
+  justify-content: space-between;
   margin: var(--space-s);
+}
+
+.nav > div:nth-child(2) {
+  display: flex;
+  gap: var(--space-m);
+}
+
+.nav > div:nth-child(2) a {
+  display: inline;
+  vertical-align: middle;
 }
 
 .mobile {
@@ -39,13 +52,13 @@
     margin: var(--space-s) var(--space-xl);
   }
 
-  .nav button {
+  .nav button[aria-haspopup] {
     display: none;
   }
 
   .desktop {
     display: grid;
-    grid-template-columns: repeat(4, auto);
+    grid-template-columns: repeat(3, auto);
     gap: var(--space-m);
     justify-content: start;
   }
