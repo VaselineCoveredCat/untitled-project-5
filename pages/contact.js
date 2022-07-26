@@ -32,7 +32,14 @@ export default function Contact() {
               <textarea id="message" name="message" rows={8}></textarea>
             </div>
 
-            <button>Send</button>
+            <button
+              onClick={(event) => {
+                event.preventDefault();
+              }}
+              type="submit"
+            >
+              Send
+            </button>
           </form>
         </article>
       </main>
