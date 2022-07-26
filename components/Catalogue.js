@@ -11,22 +11,16 @@ export default function Catalogue(props) {
               <a>
                 <div>
                   <picture>
-                    <source
-                      srcSet={`/images/${item.slug}.avif`}
-                      type="image/avif"
-                    />
-                    <source
-                      srcSet={`/images/${item.slug}.webp`}
-                      type="image/webp"
-                    />
+                    <source srcSet={`/images/${item.slug}.avif`} type="image/avif" />
+                    <source srcSet={`/images/${item.slug}.webp`} type="image/webp" />
                     <img
                       alt=""
                       aria-hidden="true"
                       decoding="async"
-                      height={2360}
+                      height={1620}
                       loading="lazy"
                       src={`/images/${item.slug}.jpg`}
-                      width={1480}
+                      width={1080}
                     />
                   </picture>
                 </div>
