@@ -195,7 +195,7 @@
   --head: "Viaoda Libre", "Viaoda Libre-fallback", serif;
   --body: "Nanum Myeongjo", "Nanum Myeongjo-fallback", serif;
 
-  --shadow: 0px 0.1px 0.1px hsl(168 36% 58% / 0.34), 0px 0.5px 0.6px -0.4px hsl(168 36% 58% / 0.34), 0px 0.9px 1px -0.7px hsl(168 36% 58% / 0.34), 0.1px 1.5px 1.7px -1.1px hsl(168 36% 58% / 0.34), 0.1px 2.4px 2.7px -1.4px hsl(168 36% 58% / 0.34), 0.2px 3.7px 4.2px -1.8px hsl(168 36% 58% / 0.34), 0.2px 5.6px 6.3px -2.1px hsl(168 36% 58% / 0.34), 0.4px 8.3px 9.3px -2.5px hsl(168 36% 58% / 0.34);
+  --shadow: 0 1px 3px hsl(0 0% 0% / 0.12), 0 1px 2px hsl(0 0% 0% / 0.24);
 }
 
 @font-face {
@@ -216,8 +216,7 @@
   font-family: "Viaoda Libre";
   font-style: normal;
   font-weight: 400;
-  src: local(""),
-    url("../public/fonts/viaoda-libre-v15-latin-regular.woff2") format("woff2"),
+  src: local(""), url("../public/fonts/viaoda-libre-v15-latin-regular.woff2") format("woff2"),
     url("../public/fonts/viaoda-libre-v15-latin-regular.woff") format("woff");
   font-display: swap;
 }
@@ -226,9 +225,7 @@
   font-family: "Nanum Myeongjo";
   font-style: normal;
   font-weight: 400;
-  src: local(""),
-    url("../public/fonts/nanum-myeongjo-v20-latin-regular.woff2")
-      format("woff2"),
+  src: local(""), url("../public/fonts/nanum-myeongjo-v20-latin-regular.woff2") format("woff2"),
     url("../public/fonts/nanum-myeongjo-v20-latin-regular.woff") format("woff");
   font-display: swap;
 }
@@ -298,7 +295,7 @@ body {
   font-weight: 400;
   color: var(--color-teal-6);
   background-color: var(--color-teal-1);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  box-shadow: var(--shadow);
   text-rendering: optimizeSpeed;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -368,6 +365,15 @@ img {
   letter-spacing: inherit;
 }
 
+:where(button, [type="email"], [type="password"], [type="text"], textarea) {
+  padding: 0.6rem 1rem;
+  border: none;
+}
+
+:where(button, [type="email"], [type="password"], [type="text"], textarea):focus {
+  outline: var(--color-aquamarine-3) solid 4px;
+}
+
 :where(button, details) {
   touch-action: manipulation;
   cursor: pointer;
@@ -415,14 +421,8 @@ summary {
 button {
   text-decoration: none;
   vertical-align: middle;
-  background-color: transparent;
-  border: none;
-  outline: transparent solid 4px;
   -webkit-appearance: button;
-}
-
-button:focus {
-  outline: var(--color-aquamarine-3) solid 4px;
+  background-color: transparent;
 }
 
 textarea {
