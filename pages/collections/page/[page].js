@@ -12,9 +12,7 @@ const supabase = createClient(
 const limit = 20;
 
 export async function getStaticPaths() {
-  const res = await supabase
-    .from("dress")
-    .select("*", { count: "exact", head: true });
+  const res = await supabase.from("dress").select("*", { count: "exact", head: true });
 
   const totalPages = Math.ceil(+res.count / limit);
   const pages = [];
@@ -33,7 +31,7 @@ export async function getStaticProps(context) {
   const res = await supabase
     .from("dress")
     .select("*", { count: "exact" })
-    .order("name", { ascending: true })
+    .order("price", { ascending: false })
     .range(start, end);
   const totalPages = Math.ceil(+res.count / limit);
 
@@ -63,9 +61,7 @@ export default function Page(props) {
                     <li>
                       <Link
                         href={
-                          +props.currentPage <= 2
-                            ? "/collections"
-                            : `${+props.currentPage - 1}`
+                          +props.currentPage <= 2 ? "/collections" : `${+props.currentPage - 1}`
                         }
                       >
                         <a>Prev</a>
