@@ -12,8 +12,7 @@
 }
 
 .footer img {
-  filter: invert(41%) sepia(63%) saturate(3710%) hue-rotate(143deg)
-    brightness(93%) contrast(102%);
+  filter: invert(41%) sepia(63%) saturate(3710%) hue-rotate(143deg) brightness(93%) contrast(102%);
 }
 
 /* 640px */
