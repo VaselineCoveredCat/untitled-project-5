@@ -35,21 +35,15 @@ export default function Product(props) {
       <main>
         <article className={styles.article}>
           <picture>
-            <source
-              srcSet={`/images/${props.items[0].slug}.avif`}
-              type="image/avif"
-            />
-            <source
-              srcSet={`/images/${props.items[0].slug}.webp`}
-              type="image/webp"
-            />
+            <source srcSet={`/images/${props.items[0].slug}.avif`} type="image/avif" />
+            <source srcSet={`/images/${props.items[0].slug}.webp`} type="image/webp" />
             <img
               alt=""
               aria-hidden="true"
               decoding="async"
-              height={2360}
+              height={1620}
               src={`/images/${props.items[0].slug}.jpg`}
-              width={1480}
+              width={1080}
             />
           </picture>
 
@@ -115,19 +109,17 @@ export default function Product(props) {
             <details>
               <summary>Shipping</summary>
               <p>
-                Please note estimated shipping times include processing time at
-                the warehouse and are calculated from the date the order is
-                placed.
+                Please note estimated shipping times include processing time at the warehouse and
+                are calculated from the date the order is placed.
               </p>
             </details>
 
             <details>
               <summary>Returns</summary>
               <p>
-                All orders (subject to our returns policy) can be returned up to
-                28 days after the date of purchase. Please note, we cannot offer
-                refunds on beauty, pierced jewellery or on swimwear if the
-                hygiene seal is not in place or has been broken.
+                All orders can be returned up to 28 days after the date of purchase. Please note, we
+                cannot offer refunds on beauty, pierced jewellery or on swimwear if the hygiene seal
+                is not in place or has been broken.
               </p>
             </details>
           </div>
