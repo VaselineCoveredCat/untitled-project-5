@@ -14,7 +14,7 @@ export async function getStaticProps() {
   const res = await supabase
     .from("dress")
     .select("*", { count: "exact" })
-    .order("name", { ascending: true })
+    .order("price", { ascending: false })
     .limit(20);
 
   const totalPages = Math.ceil(res.count / 20);
