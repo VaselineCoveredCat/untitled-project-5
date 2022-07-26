@@ -15,7 +15,7 @@ export async function getStaticProps() {
   const res = await supabase
     .from("dress")
     .select("*")
-    .order("name", { ascending: true })
+    .order("price", { ascending: false })
     .limit(4);
 
   return { props: { items: res.data } };
@@ -33,8 +33,7 @@ export default function Home(props) {
 
         <div className={styles.div}>
           <p>
-            Fashion is what you're offered four times a year by designers. Style
-            is what you choose.
+            Fashion is what you're offered four times a year by designers. Style is what you choose.
           </p>
         </div>
 
