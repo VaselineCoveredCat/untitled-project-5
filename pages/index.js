@@ -33,7 +33,7 @@ export default function Home(props) {
 
         <div className={styles.div}>
           <p>
-            Fashion is what you're offered four times a year by designers. Style is what you choose.
+            {`Fashion is what you're offered four times a year by designers. Style is what you choose.`}
           </p>
         </div>
 
