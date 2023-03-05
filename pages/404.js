@@ -12,9 +12,9 @@ export default function Lost() {
         <article>
           <h1 className="mb-xl text-center">404</h1>
           <p className="mx-auto max-w-80ch">
-            I'm afraid you've found a page that doesn't exist. That can happen
-            when you follow a link to something that has since been deleted, or
-            the link was incorrect.
+            I&apos;m afraid you&apos;ve found a page that doesn&apos;t exist.
+            That can happen when you follow a link to something that has since
+            been deleted, or the link was incorrect.
           </p>
         </article>
       </main>
