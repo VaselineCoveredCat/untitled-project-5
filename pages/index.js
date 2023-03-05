@@ -44,22 +44,10 @@ export default function Home(props) {
                 />
               </picture>
             </div>
-
-            {/* <h1 className="sr-only">
-              The Signature
-              <br />
-              Collection
-            </h1> */}
           </div>
 
           <article className="m:items-end m:gap-m-2xl grid grid-col-1 m:grid-col-2 my-xl p-m-2xl">
             <h1 className="m:mb-initial mb-xl">Sustainably Crafted Goods</h1>
-
-            {/* <p>
-              At The Shop, our goal is to improve the quality of every goods that we make. We
-              believe that manufacturing is a magical process. We focus on making every day
-              essentials out of luxury materials.
-            </p> */}
 
             <p>
               Functional products that we manufacture by hand from genuine
@@ -70,11 +58,6 @@ export default function Home(props) {
               production chain ourselves. This is how sustainable products are
               created that will accompany you for a lifetime.
             </p>
-
-            {/* <p>
-              We believe that jewelry is more than just something a pretty accessory, it's a means
-              of self-expression. That's why we create pieces that empower and are designed to last.
-            </p> */}
           </article>
 
           <article className="my-xl p-m-2xl">
@@ -89,57 +72,6 @@ export default function Home(props) {
                 </div>
               </React.Fragment>
             )}
-
-            {/* <ul role="list">
-              <li>
-                <div aria-hidden>
-                  <picture>
-                    <source srcSet="" type="image/avif" />
-                    <source srcSet="" type="image/webp" />
-                    <img
-                      alt=""
-                      decoding="async"
-                      loading="lazy"
-                      src="/images/one-shoulder-draped-cut-out-dress.jpg"
-                    />
-                  </picture>
-                </div>
-              </li>
-
-              <li>
-                <div aria-hidden>
-                  <picture>
-                    <source srcSet="" type="image/avif" />
-                    <source srcSet="" type="image/webp" />
-                    <img
-                      alt=""
-                      decoding="async"
-                      loading="lazy"
-                      src="/images/one-shoulder-draped-cut-out-dress.jpg"
-                    />
-                  </picture>
-                </div>
-              </li>
-
-              <li>
-                <div aria-hidden>
-                  <picture>
-                    <source srcSet="" type="image/avif" />
-                    <source srcSet="" type="image/webp" />
-                    <img
-                      alt=""
-                      decoding="async"
-                      loading="lazy"
-                      src="/images/one-shoulder-draped-cut-out-dress.jpg"
-                    />
-                  </picture>
-                </div>
-              </li>
-            </ul> */}
-
-            {/* <div>
-              <a href="/">View All</a>
-            </div> */}
           </article>
 
           <article className="my-xl p-m-2xl text-center">
