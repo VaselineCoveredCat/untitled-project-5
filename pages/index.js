@@ -61,7 +61,7 @@ export default function Home(props) {
           </article>
 
           <article className="my-xl p-m-2xl">
-            <h2 className="mb-l text-center">What's New</h2>
+            <h2 className="mb-l text-center">What&apos;s New</h2>
 
             {props.items && (
               <React.Fragment>
