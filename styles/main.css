@@ -226,7 +226,7 @@
   font-family: "body";
   font-style: normal;
   font-weight: 400;
-  src: local(""),
+  src: local("Rubik"),
     url("../public/fonts/rubik-v23-latin-regular.woff2") format("woff2"),
     url("../public/fonts/rubik-v23-latin-regular.woff") format("woff");
   font-display: swap;
@@ -236,7 +236,7 @@
   font-family: "head";
   font-style: normal;
   font-weight: 400;
-  src: local(""),
+  src: local("Old Standard TT"),
     url("../public/fonts/old-standard-tt-v18-latin-regular.woff2")
       format("woff2"),
     url("../public/fonts/old-standard-tt-v18-latin-regular.woff") format("woff");
